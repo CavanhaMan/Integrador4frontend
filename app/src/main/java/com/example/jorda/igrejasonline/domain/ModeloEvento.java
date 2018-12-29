@@ -27,7 +27,6 @@ public class ModeloEvento {
     public String getTitulo() {
         return titulo;
     }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -35,7 +34,6 @@ public class ModeloEvento {
     public String getDataInicio() {
         return dataInicio;
     }
-
     public void setDataInicio(String dataInicio) {
         this.dataInicio = dataInicio;
     }
@@ -43,7 +41,6 @@ public class ModeloEvento {
     public String getDataTermino() {
         return dataTermino;
     }
-
     public void setDataTermino(String dataTermino) {
         this.dataTermino = dataTermino;
     }
@@ -51,7 +48,6 @@ public class ModeloEvento {
     public String getHoraInicio() {
         return horaInicio;
     }
-
     public void setHoraInicio(String horaInicio) {
         this.horaInicio = horaInicio;
     }
@@ -59,7 +55,6 @@ public class ModeloEvento {
     public String getHoraTermino() {
         return horaTermino;
     }
-
     public void setHoraTermino(String horaTermino) {
         this.horaTermino = horaTermino;
     }
@@ -67,7 +62,6 @@ public class ModeloEvento {
     public String getDescricao() {
         return descricao;
     }
-
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
@@ -75,7 +69,6 @@ public class ModeloEvento {
     public String getPublico() {
         return publico;
     }
-
     public void setPublico(String publico) {
         this.publico = publico;
     }
@@ -83,7 +76,6 @@ public class ModeloEvento {
     public boolean isRepete() {
         return repete;
     }
-
     public void setRepete(boolean repete) {
         this.repete = repete;
     }
@@ -91,7 +83,6 @@ public class ModeloEvento {
     public String getLogradouro() {
         return logradouro;
     }
-
     public void setLogradouro(String logradouro) {
         this.logradouro = logradouro;
     }
@@ -99,7 +90,6 @@ public class ModeloEvento {
     public String getNumero() {
         return numero;
     }
-
     public void setNumero(String numero) {
         this.numero = numero;
     }
@@ -107,7 +97,6 @@ public class ModeloEvento {
     public String getComplemento() {
         return complemento;
     }
-
     public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
@@ -115,7 +104,6 @@ public class ModeloEvento {
     public String getBairro() {
         return bairro;
     }
-
     public void setBairro(String bairro) {
         this.bairro = bairro;
     }
@@ -123,7 +111,6 @@ public class ModeloEvento {
     public String getCep() {
         return cep;
     }
-
     public void setCep(String cep) {
         this.cep = cep;
     }
@@ -131,7 +118,6 @@ public class ModeloEvento {
     public String getNomeCidade() {
         return nomeCidade;
     }
-
     public void setNomeCidade(String nomeCidade) {
         this.nomeCidade = nomeCidade;
     }
@@ -139,7 +125,6 @@ public class ModeloEvento {
     public String getNomeEstado() {
         return nomeEstado;
     }
-
     public void setNomeEstado(String nomeEstado) {
         this.nomeEstado = nomeEstado;
     }
@@ -147,7 +132,6 @@ public class ModeloEvento {
     public String getUf() {
         return uf;
     }
-
     public void setUf(String uf) {
         this.uf = uf;
     }
@@ -155,7 +139,6 @@ public class ModeloEvento {
     public String getCnpjIgreja() {
         return cnpjIgreja;
     }
-
     public void setCnpjIgreja(String cnpjIgreja) {
         this.cnpjIgreja = cnpjIgreja;
     }
@@ -163,7 +146,6 @@ public class ModeloEvento {
     public String getTelefoneIgreja() {
         return telefoneIgreja;
     }
-
     public void setTelefoneIgreja(String telefoneIgreja) {
         this.telefoneIgreja = telefoneIgreja;
     }
@@ -171,7 +153,6 @@ public class ModeloEvento {
     public String getNomeIgreja() {
         return nomeIgreja;
     }
-
     public void setNomeIgreja(String nomeIgreja) {
         this.nomeIgreja = nomeIgreja;
     }
