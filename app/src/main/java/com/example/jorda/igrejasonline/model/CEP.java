@@ -6,9 +6,9 @@ package com.example.jorda.igrejasonline.model;
 public class CEP {
 
     int id;
-    String cep, logradouro, complemento,  bairro, localidade, uf, ibge  ;
+    String cep, logradouro, complemento,  bairro, localidade, uf ;
 
-    public CEP(int id, String cep, String logradouro, String complemento, String bairro, String localidade, String uf, String ibge){
+    public CEP(int id, String cep, String logradouro, String complemento, String bairro, String localidade, String uf){
         this.id = id;
         this.cep = cep;
         this.logradouro = logradouro;
@@ -16,7 +16,6 @@ public class CEP {
         this.bairro = bairro;
         this.localidade = localidade;
         this.uf = uf;
-        this.ibge = ibge;
     }
 
     public CEP(){ }
@@ -62,12 +61,6 @@ public class CEP {
     }
     public void setUf(String uf) {
         this.uf = uf;
-    }
-    public String getIbge() {
-        return ibge;
-    }
-    public void setIbge(String ibge) {
-        this.ibge = ibge;
     }
 
     @Override

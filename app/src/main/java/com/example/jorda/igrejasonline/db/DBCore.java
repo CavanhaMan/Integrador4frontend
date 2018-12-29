@@ -25,8 +25,7 @@ public class DBCore extends SQLiteOpenHelper {
         + " complemento TEXT,"
         + " bairro TEXT,"
         + " localidade TEXT NOT NULL,"
-        + " uf TEXT NOT NULL,"
-        + " ibge TEXT);");
+        + " uf TEXT NOT NULL);");
     }
 
     @Override

@@ -23,8 +23,6 @@ public class DB {
     private static final String COLUNA_BAIRRO = "bairro";
     private static final String COLUNA_LOCALIDADE = "localidade";
     private static final String COLUNA_UF = "uf";
-    private static final String COLUNA_IBGE = "ibge";
-
 
     private DBCore dbCore;
 
@@ -47,19 +45,23 @@ public class DB {
         contentValues.put(COLUNA_BAIRRO, cep.getBairro());
         contentValues.put(COLUNA_LOCALIDADE, cep.getLocalidade());
         contentValues.put(COLUNA_UF, cep.getUf());
-        contentValues.put(COLUNA_IBGE, cep.getIbge());
 
         db.insert(NOME_TABLE, null, contentValues);
     }
 
     public CEP getSingleCep(int _id) {
         Cursor cursor = db.query(NOME_TABLE, new String[]{COLUNA_ID, COLUNA_CEP, COLUNA_LOGRADOURO, COLUNA_COMPLEMENTO,
-                COLUNA_BAIRRO, COLUNA_LOCALIDADE, COLUNA_UF, COLUNA_IBGE}, COLUNA_ID + "=?",
+                COLUNA_BAIRRO, COLUNA_LOCALIDADE, COLUNA_UF}, COLUNA_ID + "=?",
                 new String[]{String.valueOf(_id)}, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
-        CEP cep = new CEP(Integer.parseInt(cursor.getString(0)), cursor.getString(1), cursor.getString(2),
-                cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6), cursor.getString(7));
+        CEP cep = new CEP(Integer.parseInt(cursor.getString(0)),
+                            cursor.getString(1),
+                            cursor.getString(2),
+                            cursor.getString(3),
+                            cursor.getString(4),
+                            cursor.getString(5),
+                            cursor.getString(6));
         return cep;
     }
 

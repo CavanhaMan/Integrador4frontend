@@ -4,46 +4,34 @@
     android:orientation="vertical"
     android:layout_marginBottom="6dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="16dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:padding="16dp">
+    <TextView
+        android:id="@+id/txtIgrejaCnpj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif-light"
+        android:text="CNPJ"
+        android:textSize="12sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:orientation="vertical"
-            android:paddingRight="8dp">
+    <TextView
+        android:id="@+id/txtIgrejaNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Nome"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/txtIgrejaCnpj"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:fontFamily="sans-serif-light"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/txtIgrejaNome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/txtIgrejaTelefone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-    </LinearLayout>
+    <TextView
+        android:id="@+id/txtIgrejaTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Telefone"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 </LinearLayout>

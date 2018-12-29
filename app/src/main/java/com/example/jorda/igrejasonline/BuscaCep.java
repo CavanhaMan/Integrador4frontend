@@ -114,7 +114,6 @@ public class BuscaCep extends AppCompatActivity {
                     String bairro = reader.getString("bairro");
                     String localidade = reader.getString("localidade");
                     String uf = reader.getString("uf");
-                    String ibge = reader.getString("ibge");
 
                     DB db = new DB(BuscaCep.this);
                     CEP c = new CEP();
@@ -124,7 +123,6 @@ public class BuscaCep extends AppCompatActivity {
                     c.setBairro(bairro);
                     c.setLocalidade(localidade);
                     c.setUf(uf);
-                    c.setIbge(ibge);
                     db.salvar(c);
 
                     progressDialog.dismiss();

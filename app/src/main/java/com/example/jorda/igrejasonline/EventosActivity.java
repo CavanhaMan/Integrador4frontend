@@ -30,6 +30,8 @@ public class EventosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventos);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); //Mostra a barra para poder mostrar o botao voltar
+        setSupportActionBar(toolbar);
 
         listView = findViewById(R.id.listaE);
 
