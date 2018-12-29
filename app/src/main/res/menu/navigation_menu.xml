@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
+<!--    <item
         android:id="@+id/configConta"
         android:icon="@drawable/ic_portrait_black_24dp"
-        android:title="Usuário" />
+        android:title="Usuário" />-->
+
     <item
         android:id="@+id/configIgreja"
         android:icon="@drawable/ic_brightness_high_black_24dp"
         android:title="Igrejas" />
 
-    <item
+<!--    <item
         android:id="@+id/configCalendario"
         android:icon="@drawable/ic_brightness_high_black_24dp"
-        android:title="Calendario" />
+        android:title="Calendario" />-->
 
     <item
         android:id="@+id/configEvento"

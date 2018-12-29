@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         final ImageView botaoIgrejas = findViewById(R.id.imigreja);
         final ImageView botaoEventos = findViewById(R.id.imagenda);
-        final ImageView botaoCalendario = findViewById(R.id.imcalendario);
+//        final ImageView botaoCalendario = findViewById(R.id.imcalendario);
 
         botaoIgrejas.setOnClickListener(new View.OnClickListener()   {
             public void onClick(View v)  {
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-        botaoCalendario.setOnClickListener(new View.OnClickListener()   {
+/*        botaoCalendario.setOnClickListener(new View.OnClickListener()   {
             public void onClick(View v)  {
                 try {
                     Toast.makeText(getApplicationContext(), "Calendário", Toast.LENGTH_SHORT).show();
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     e.printStackTrace();
                 }
             }
-        });
+        });*/
 
     }
     @Override

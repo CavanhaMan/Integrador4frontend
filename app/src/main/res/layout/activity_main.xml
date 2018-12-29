@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/imigreja"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -25,7 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.063"
+            app:layout_constraintVertical_bias="0.145"
             app:srcCompat="@drawable/iglocal2" />
 
 
@@ -46,18 +46,18 @@
 
         <ImageView
             android:id="@+id/imagenda"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:onClick="onClick"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txigreja"
-            app:layout_constraintVertical_bias="0.044"
-            android:onClick="onClick"
+            app:layout_constraintVertical_bias="0.38"
             app:srcCompat="@drawable/igagenda" />
 
         <TextView
@@ -69,13 +69,12 @@
             android:layout_marginBottom="8dp"
             android:text="@string/txagenda"
             android:textSize="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/imcalendario"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imagenda"
             app:layout_constraintVertical_bias="0.0" />
 
-        <ImageView
+        <!--ImageView
             android:id="@+id/imcalendario"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -106,7 +105,7 @@
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imcalendario"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0" /-->
 
         <!-- Abaixo segue o codigo de um botão flutuante (com lupa) -->
         <!--android.support.design.widget.FloatingActionButton
