@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         botaoIgrejas.setOnClickListener(new View.OnClickListener()   {
             public void onClick(View v)  {
                 try {
+                    Toast.makeText(getApplicationContext(), "Igrejas", Toast.LENGTH_SHORT).show();
                     // abrindo um nova activity [ Tela de listar igrejas ]
                     Intent intentIgrejas = new Intent(getApplicationContext(), IgrejasActivity.class);
                     startActivity(intentIgrejas);
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         botaoEventos.setOnClickListener(new View.OnClickListener()   {
             public void onClick(View v)  {
                 try {
+                    Toast.makeText(getApplicationContext(), "Agenda", Toast.LENGTH_SHORT).show();
                     // abrindo um nova activity [ Tela de listar Eventos ]
                     Intent intentEventos = new Intent(getApplicationContext(), EventosActivity.class);
                     startActivity(intentEventos);
@@ -65,8 +67,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         botaoCalendario.setOnClickListener(new View.OnClickListener()   {
             public void onClick(View v)  {
                 try {
-                    // abrindo um nova activity [ Tela de listar Agenda ]
-                    Toast.makeText(getApplicationContext(), "Clicou em Agendas", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Calendário", Toast.LENGTH_SHORT).show();
+                    // abrindo um nova activity [ Tela de listar Calendario ]
+                    Intent intentCalendarios = new Intent(getApplicationContext(), CalendariosActivity.class);
+                    startActivity(intentCalendarios);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

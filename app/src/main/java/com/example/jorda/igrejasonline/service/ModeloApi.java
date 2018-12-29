@@ -1,5 +1,6 @@
 package com.example.jorda.igrejasonline.service;
 
+import com.example.jorda.igrejasonline.domain.ModeloCalendario;
 import com.example.jorda.igrejasonline.domain.ModeloEvento;
 import com.example.jorda.igrejasonline.domain.ModeloIgreja;
 import com.example.jorda.igrejasonline.model.ModeloCidade;
@@ -33,5 +34,7 @@ public interface ModeloApi {
     @GET("/eventos/{id}")
     Call<ModeloEvento> consulta(@Path("id") Integer id);
 
-
+    // End-point busca igreja
+    @GET("/calendarios")
+    Call<List<ModeloCalendario>> getCalendarios();
 }

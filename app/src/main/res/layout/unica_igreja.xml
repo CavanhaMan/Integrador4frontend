@@ -20,7 +20,7 @@
         android:id="@+id/txtIgrejaNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed"
+        android:fontFamily="sans-serif-light"
         android:text="Nome"
         android:textSize="16sp"
         android:textStyle="bold" />
@@ -29,7 +29,7 @@
         android:id="@+id/txtIgrejaTelefone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed"
+        android:fontFamily="sans-serif-light"
         android:text="Telefone"
         android:textSize="16sp"
         android:textStyle="bold" />
