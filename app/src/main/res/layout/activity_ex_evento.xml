@@ -37,7 +37,7 @@
             android:layout_marginEnd="8dp"
             android:ems="10"
             android:hint="Código do Evento"
-            android:inputType="textPersonName"
+            android:inputType="numberDecimal"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

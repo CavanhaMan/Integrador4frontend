@@ -10,6 +10,15 @@
     android:columnCount="2">
 
     <TextView
+        android:id="@+id/txt_eventoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif-light"
+        android:text="ID:"
+        android:textSize="12sp" />
+
+    <TextView
         android:id="@+id/txt_eventoTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +26,7 @@
         android:text="blablabla"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_row="0"
+        android:layout_row="1"
         android:layout_column="0"
         android:layout_columnSpan="2"/>
 
@@ -28,7 +37,7 @@
         android:fontFamily="sans-serif-light"
         android:text="Data início: "
         android:textSize="14sp"
-        android:layout_row="1"
+        android:layout_row="2"
         android:layout_column="0"/>
 
     <TextView
@@ -39,7 +48,7 @@
         android:text="00/00/0000"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_row="1"
+        android:layout_row="2"
         android:layout_column="1" />
 
     <TextView
@@ -49,7 +58,7 @@
         android:fontFamily="sans-serif-light"
         android:text="Hora início: "
         android:textSize="14sp"
-        android:layout_row="2"
+        android:layout_row="3"
         android:layout_column="0"/>
 
     <TextView
@@ -60,7 +69,7 @@
         android:text="00:00"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_row="2"
+        android:layout_row="3"
         android:layout_column="1" />
 
     <TextView
@@ -70,7 +79,7 @@
         android:fontFamily="sans-serif-light"
         android:text="Data término: "
         android:textSize="14sp"
-        android:layout_row="3"
+        android:layout_row="4"
         android:layout_column="0"/>
 
     <TextView
@@ -81,7 +90,7 @@
         android:text="00/00/0000"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_row="3"
+        android:layout_row="4"
         android:layout_column="1" />
 
     <TextView
@@ -91,7 +100,7 @@
         android:fontFamily="sans-serif-light"
         android:text="Hora término: "
         android:textSize="14sp"
-        android:layout_row="4"
+        android:layout_row="5"
         android:layout_column="0"/>
 
     <TextView
@@ -102,7 +111,7 @@
         android:text="00:00"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_row="4"
+        android:layout_row="5"
         android:layout_column="1" />
 
 </GridLayout>

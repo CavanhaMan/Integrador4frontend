@@ -8,6 +8,15 @@
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/txt_igrejaId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif-light"
+        android:text="ID:"
+        android:textSize="12sp" />
+
+    <TextView
         android:id="@+id/txtIgrejaCnpj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

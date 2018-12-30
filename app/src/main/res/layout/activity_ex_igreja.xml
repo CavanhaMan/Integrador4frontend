@@ -37,7 +37,7 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="Código da Igreja"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

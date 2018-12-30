@@ -30,13 +30,12 @@ public class IgrejaAdapter extends ArrayAdapter<Igreja> {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.unica_igreja, parent, false);
 
-
-        // Montar a imagem com base na primeira letra do nome
-
+        TextView txtIgrejaId = (TextView) rowView.findViewById(R.id.txt_igrejaId);
         TextView txtIgrejaCnjp = (TextView) rowView.findViewById(R.id.txtIgrejaCnpj);
         TextView txtIgrejaNome = (TextView) rowView.findViewById(R.id.txtIgrejaNome);
         TextView txtIgrejaTelefone = (TextView) rowView.findViewById(R.id.txtIgrejaTelefone);
 
+        txtIgrejaId.setText(String.format("ID: %s", igrejas.get(pos).getId()));
         txtIgrejaCnjp.setText(String.format("CNJP: %s", igrejas.get(pos).getCnpj()));
         txtIgrejaNome.setText(String.format("%s", igrejas.get(pos).getNome()));
         txtIgrejaTelefone.setText(String.format("Telefone:  %s", igrejas.get(pos).getTelefone()));

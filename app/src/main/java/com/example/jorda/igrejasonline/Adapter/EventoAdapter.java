@@ -29,20 +29,19 @@ public class EventoAdapter extends ArrayAdapter<Evento> {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.unica_evento, parent, false);
 
-        // Montar a imagem com base na primeira letra do nome
-
+        TextView eventoId          = rowView.findViewById(R.id.txt_eventoId);
         TextView eventoTitulo      = rowView.findViewById(R.id.txt_eventoTitulo);
         TextView eventoDataInicio  = rowView.findViewById(R.id.txt_eventoDataInicio);
         TextView eventoHoraInicio  = rowView.findViewById(R.id.txt_eventoHoraInicio);
         TextView eventoDataTermino = rowView.findViewById(R.id.txt_eventoDataTermino);
         TextView eventoHoraTermino = rowView.findViewById(R.id.txt_eventoHoraTermino);
 
+        eventoId.setText(String.format("ID: %s",eventos.get(pos).getId()));
         eventoTitulo.setText(String.format("Evento: %s",eventos.get(pos).getTitulo()));
         eventoDataInicio.setText((String.format("%s",eventos.get(pos).getDataInicio())));
         eventoHoraInicio.setText((String.format("%s",eventos.get(pos).getHoraInicio())));
         eventoDataTermino.setText((String.format("%s",eventos.get(pos).getDataTermino())));
         eventoHoraTermino.setText((String.format("%s",eventos.get(pos).getHoraTermino())));
-
 
         return rowView;
     }

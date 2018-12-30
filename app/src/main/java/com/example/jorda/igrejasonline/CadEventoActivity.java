@@ -75,7 +75,7 @@ public class CadEventoActivity extends AppCompatActivity {
         String tpublico = temppublico.getText().toString();
 
 
-        Evento evento = new Evento(ttitulo, tdatainicio, thorainicio, tdatatermino, thoratermino, tdescricao, tpublico);
+        Evento evento = new Evento(null,ttitulo, tdatainicio, thorainicio, tdatatermino, thoratermino, tdescricao, tpublico);
 
         Call call = retrofitService.getServico().cadastrarEvento(evento);
         call.enqueue(new Callback<Evento>() {
