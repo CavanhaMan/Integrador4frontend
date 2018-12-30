@@ -45,9 +45,8 @@ public interface ModeloApi {
     @PUT("/igrejas/{id}")
     Call<Igreja> editarIgreja(@Path("id") Integer id, @Body Igreja igreja);
 
-    @DELETE("/usuarios/{id}")
-    Call<Igreja> apagarIgreja(@Path("id") int id);
-
+    @DELETE("/igrejas/{id}")
+    Call<Igreja> excluirIgreja(@Path("id") int id);
 
     @POST("/eventos")
     Call<Void> cadastrarEvento(@Body Evento evento);
@@ -55,7 +54,8 @@ public interface ModeloApi {
     @PUT("/eventos/{id}")
     Call<Evento> editarEvento(@Path("id") Integer id, @Body Evento evento);
 
-    @DELETE("/usuarios/{id}")
-    Call<Evento> apagarEvento(@Path("id") int id);
+    @DELETE("/eventos/{id}")
+    Call<Evento> excluirEvento(@Path("id") int id);
+
 
 }

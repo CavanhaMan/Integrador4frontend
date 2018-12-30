@@ -20,8 +20,6 @@ public class EdEventoActivity extends AppCompatActivity {
 
     private RetrofitService retrofitService;
 
-    /*String[] opcoessp = {"Não","Semanalmente","Quinzenalmente","Mensalmente","Bimestralmente","Semestralmente","Anualmente"};*/
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +27,6 @@ public class EdEventoActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //Mostrar o botão
         getSupportActionBar().setHomeButtonEnabled(true);      //Ativar o botão
-        //getSupportActionBar().setTitle("Seu titulo aqui");     //Titulo para ser exibido na sua Action Bar em frente à seta
     }
 
     @Override
