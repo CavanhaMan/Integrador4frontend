@@ -36,14 +36,14 @@
     </style>
 
     <style name="botaovoltar">
-        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_width">110dp</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:layout_marginTop">15dp</item>
         <item name="android:layout_marginStart">20dp</item>
         <item name="android:textSize">14sp</item>
     </style>
     <style name="botaoavancar">
-        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_width">110dp</item>
         <item name="android:layout_height">40dp</item>
         <item name="android:layout_marginTop">15dp</item>
         <item name="android:layout_marginEnd">20dp</item>

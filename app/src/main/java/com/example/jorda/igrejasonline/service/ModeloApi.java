@@ -12,6 +12,7 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface ModeloApi {
@@ -29,16 +30,19 @@ public interface ModeloApi {
     @GET("/igrejas/{id}")
     Call<Igreja> consulta(@Path("titulo")  String titulo);
 
-    // End-point busca igreja
+    // End-point busca Eventos
     @GET("/eventos")
     Call<List<Evento>> getEventos();
 
     @GET("/eventos/{id}")
     Call<Evento> consulta(@Path("id") Integer id);
 
-/*  // End-point busca igreja
-    @GET("/calendarios")
-    Call<List<Calendario>> getCalendarios(); */
     @POST("/igrejas")
     Call<Void> cadastrarIgreja(@Body Igreja igreja); // post sem retorno
+
+    @PUT("/igrejas/{id}")
+    Call<Igreja> updateIgreja(@Path("id") Integer id, @Body Igreja igreja);
+
+    @POST("/eventos")
+    Call<Void> cadastrarEvento(@Body Evento evento);
 }

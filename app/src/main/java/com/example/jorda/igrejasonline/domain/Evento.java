@@ -15,7 +15,7 @@ public class Evento implements Serializable {
     private Endereco endereco;
     private Igreja igreja;
 
-    public Evento(String titulo, String dataInicio, String horaInicio, String dataTermino, String horaTermino, String descricao, String publico, boolean repete) {
+    public Evento(String titulo, String dataInicio, String horaInicio, String dataTermino, String horaTermino, String descricao, String publico) {
         this.titulo = titulo;
         this.dataInicio = dataInicio;
         this.horaInicio = horaInicio;
@@ -23,7 +23,6 @@ public class Evento implements Serializable {
         this.horaTermino = horaTermino;
         this.descricao = descricao;
         this.publico = publico;
-        this.repete = repete;
     }
 
     public String getTitulo() {

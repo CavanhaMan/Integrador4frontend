@@ -1,34 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/confCadIgreja"
+        android:icon="@drawable/ic_brightness_high_black_24dp"
+        android:title="Cadastrar Igrejas" />
+
+    <item
+        android:id="@+id/confEdIgreja"
+        android:icon="@drawable/ic_brightness_high_black_24dp"
+        android:title="Editar Igrejas" />
+
+    <item
+        android:id="@+id/confExIgreja"
+        android:icon="@drawable/ic_brightness_high_black_24dp"
+        android:title="Excluir Igrejas" />
+
+    <item
+        android:id="@+id/confCadEvento"
+        android:icon="@drawable/ic_brightness_high_black_24dp"
+        android:title="Cadastrar Eventos" />
+
+    <item
+        android:id="@+id/confEdEvento"
+        android:icon="@drawable/ic_brightness_high_black_24dp"
+        android:title="Editar Eventos" />
+
+    <item
+        android:id="@+id/confExEvento"
+        android:icon="@drawable/ic_brightness_high_black_24dp"
+        android:title="Excluir Eventos" />
+<!--
+    <item
+        android:id="@+id/confCadEntidade"
+        android:icon="@drawable/ic_brightness_high_black_24dp"
+        android:title="Cadastrar Entidades" />-->
+
 <!--    <item
-        android:id="@+id/configConta"
+        android:id="@+id/confCadEdereco"
         android:icon="@drawable/ic_portrait_black_24dp"
-        android:title="Usuário" />-->
+        android:title="Cadastrar Endereços" />-->
 
-    <item
-        android:id="@+id/configIgreja"
-        android:icon="@drawable/ic_brightness_high_black_24dp"
-        android:title="Igrejas" />
+    <!--    <item
+                android:id="@+id/configCalendario"
+                android:icon="@drawable/ic_brightness_high_black_24dp"
+                android:title="Calendario" />-->
+    <!--    <item
+            android:id="@+id/configConta"
+            android:icon="@drawable/ic_portrait_black_24dp"
+            android:title="Usuário" />-->
 
-<!--    <item
-        android:id="@+id/configCalendario"
-        android:icon="@drawable/ic_brightness_high_black_24dp"
-        android:title="Calendario" />-->
-
-    <item
-        android:id="@+id/configEvento"
-        android:icon="@drawable/ic_brightness_high_black_24dp"
-        android:title="Eventos" />
-
-    <item
-        android:id="@+id/configEntidade"
-        android:icon="@drawable/ic_brightness_high_black_24dp"
-        android:title="Entidades" />
-
-    <item
-        android:id="@+id/configEdereco"
-        android:icon="@drawable/ic_portrait_black_24dp"
-        android:title="Endereços" />
 
 </menu>

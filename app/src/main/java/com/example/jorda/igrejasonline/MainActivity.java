@@ -89,30 +89,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int id = menuItem.getItemId();
         switch (id) {
+            case R.id.confCadIgreja:
+                Toast.makeText(MainActivity.this, "Igrejas", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,CadIgrejaActivity.class));
+                break;
+            case R.id.confCadEvento:
+                Toast.makeText(MainActivity.this, "Eventos", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,CadEventoActivity.class));
+                break;
             /*case R.id.configConta:
                 Toast.makeText(MainActivity.this, "Usuários", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,CadUsuarioActivity.class));
                 break;*/
-            case R.id.configIgreja:
-                Toast.makeText(MainActivity.this, "Igrejas", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this,CadIgrejaActivity.class));
-                break;
             /*case R.id.configCalendario:
                 Toast.makeText(MainActivity.this, "Celendário", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,CadEventoActivity.class));
                 break;*/
-            case R.id.configEvento:
-                Toast.makeText(MainActivity.this, "Eventos", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this,CadEventoActivity.class));
-                break;
-            case R.id.configEntidade:
+            /*case R.id.confCadEntidade:
                 Toast.makeText(MainActivity.this, "Entidades", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,CadEntidadeActivity.class));
-                break;
-            case R.id.configEdereco:
+                break;*/
+            /*case R.id.confCadEdereco:
                 Toast.makeText(MainActivity.this, "Cadastro de Endereço", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,CadEnderecoActivity.class));
-                break;
+                break;*/
             default:
                 return true;
         }

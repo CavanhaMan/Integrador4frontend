@@ -13,27 +13,6 @@
         android:layout_height="match_parent"
         tools:context=".CadEventoActivity">
 
-        <TextView
-            android:id="@+id/name_label7"
-            android:layout_width="52dp"
-            android:layout_height="27dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
-            android:text="Igreja:"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_label2" />
-
-        <TextView
-            android:id="@+id/name_label2"
-            android:layout_width="206dp"
-            android:layout_height="28dp"
-            android:layout_marginStart="8dp"
-            android:text="O evento se repetirá?"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/publico" />
-
         <EditText
             android:id="@+id/descricao"
             android:layout_width="0dp"
@@ -188,38 +167,40 @@
             app:layout_constraintTop_toBottomOf="@+id/name_label5" />
 
         <Button
-            android:id="@+id/cadastrarIgreja"
+            android:id="@+id/CadastrarEvento"
             style="@style/botaoavancar"
-            android:layout_marginTop="8dp"
-            android:onClick="CadEndereco"
-            android:text="@string/proximo"
+            android:onClick="cadastrarEvento"
+            android:text="Cadastrar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/repete" />
+            app:layout_constraintTop_toBottomOf="@+id/publico" />
 
         <Button
             android:id="@+id/voltar"
             style="@style/botaovoltar"
-            android:layout_marginTop="8dp"
             android:onClick="voltarInicio"
             android:text="@string/voltar"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/repete" />
+            app:layout_constraintTop_toBottomOf="@+id/publico" />
 
-        <Spinner
-            android:id="@+id/repetesp"
-            android:layout_width="106dp"
-            android:layout_height="22dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintStart_toEndOf="@+id/name_label2"
+<!--        <TextView
+            android:id="@+id/name_label2"
+            android:layout_width="206dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            android:text="O evento se repetirá?"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/publico" />
 
         <RadioGroup
-            android:id="@+id/repete"
+            android:id="@+id/rbRepete"
             android:layout_width="wrap_content"
-            android:layout_height="123dp"
-            android:layout_marginEnd="72dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="64dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/name_label2"
             app:layout_constraintTop_toBottomOf="@+id/publico">
 
             <RadioButton
@@ -230,31 +211,11 @@
                 android:text="@string/nao" />
 
             <RadioButton
-                android:id="@+id/radioSemanalmente"
+                android:id="@+id/radioSim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/semanalmente" />
-
-            <RadioButton
-                android:id="@+id/radioMensalmente"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/mensalmente" />
-
-            <RadioButton
-                android:id="@+id/radioAnualmente"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/anualmente" />
-        </RadioGroup>
-
-        <Spinner
-            android:id="@+id/igrejasp"
-            android:layout_width="106dp"
-            android:layout_height="22dp"
-            android:layout_marginTop="44dp"
-            app:layout_constraintStart_toEndOf="@+id/name_label7"
-            app:layout_constraintTop_toBottomOf="@+id/name_label2" />
+                android:text="Sim" />
+        </RadioGroup>-->
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
