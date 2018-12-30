@@ -10,16 +10,16 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.jorda.igrejasonline.R;
-import com.example.jorda.igrejasonline.domain.ModeloEvento;
+import com.example.jorda.igrejasonline.domain.Evento;
 
 import java.util.List;
 
-public class CalendarioAdapter extends ArrayAdapter<ModeloEvento> {
+public class CalendarioAdapter extends ArrayAdapter<Evento> {
 
     private Context context;
-    private List<ModeloEvento> eventos;
+    private List<Evento> eventos;
 
-    public CalendarioAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<ModeloEvento> objects) {
+    public CalendarioAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Evento> objects) {
         super(context, resource, objects);
         this.context = context;
         this.eventos = objects;

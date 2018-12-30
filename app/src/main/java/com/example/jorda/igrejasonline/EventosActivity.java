@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.jorda.igrejasonline.Adapter.EventoAdapter;
-import com.example.jorda.igrejasonline.domain.ModeloEvento;
+import com.example.jorda.igrejasonline.domain.Evento;
 import com.example.jorda.igrejasonline.service.RetrofitService;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class EventosActivity extends AppCompatActivity {
 
     ListView listView;
     RetrofitService service;
-    List<ModeloEvento> listaEventos = new ArrayList<ModeloEvento>();
+    List<Evento> listaEventos = new ArrayList<Evento>();
     EventoAdapter eventoAdapter;
 
     @Override
@@ -61,10 +61,10 @@ public class EventosActivity extends AppCompatActivity {
     }
 
     private void getEventos() {
-        Call<List<ModeloEvento>> call = service.getServico().getEventos();
-        call.enqueue(new Callback<List<ModeloEvento>>() {
+        Call<List<Evento>> call = service.getServico().getEventos();
+        call.enqueue(new Callback<List<Evento>>() {
             @Override
-            public void onResponse(Call<List<ModeloEvento>> call, Response<List<ModeloEvento>> response) {
+            public void onResponse(Call<List<Evento>> call, Response<List<Evento>> response) {
                 if (response.isSuccessful()) {
                     listaEventos = response.body();
                     Log.d("EVENTO", "onResponse: "+listaEventos.toString());
@@ -73,7 +73,7 @@ public class EventosActivity extends AppCompatActivity {
                 }
             }
             @Override
-            public void onFailure(Call<List<ModeloEvento>> call, Throwable t) {
+            public void onFailure(Call<List<Evento>> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
         });

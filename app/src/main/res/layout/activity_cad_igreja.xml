@@ -27,16 +27,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Nome da Igreja"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.031"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/order_textview" />
+        app:layout_constraintTop_toBottomOf="@+id/order_textview"
+        tools:layout_editor_absoluteX="0dp" />
 
 
     <EditText
-        android:id="@+id/titulo"
+        android:id="@+id/nomeIgreja"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/nome_da_igreja"
@@ -58,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/nomeIgreja" />
 
     <EditText
         android:id="@+id/cnpj"
@@ -100,7 +99,7 @@
         style="@style/botaoavancar"
         android:id="@+id/cadastrarIgreja"
         android:onClick="cadastrarIgreja"
-        android:text="Avançar"
+        android:text="Cadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/telefone" />
 

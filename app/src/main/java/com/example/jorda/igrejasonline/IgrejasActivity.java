@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.example.jorda.igrejasonline.Adapter.IgrejaAdapter;
-import com.example.jorda.igrejasonline.domain.ModeloIgreja;
+import com.example.jorda.igrejasonline.domain.Igreja;
 import com.example.jorda.igrejasonline.service.RetrofitService;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class IgrejasActivity extends AppCompatActivity {
 
     ListView listView;
     RetrofitService service;
-    List<ModeloIgreja> listaIgrejas = new ArrayList<ModeloIgreja>();
+    List<Igreja> listaIgrejas = new ArrayList<Igreja>();
     IgrejaAdapter igrejaAdapter;
 
     @Override
@@ -62,10 +62,10 @@ public class IgrejasActivity extends AppCompatActivity {
     }
 
     private void getIgrejas() {
-        Call<List<ModeloIgreja>> call = service.getServico().getIgrejas();
-        call.enqueue(new Callback<List<ModeloIgreja>>() {
+        Call<List<Igreja>> call = service.getServico().getIgrejas();
+        call.enqueue(new Callback<List<Igreja>>() {
             @Override
-            public void onResponse(Call<List<ModeloIgreja>> call, Response<List<ModeloIgreja>> response) {
+            public void onResponse(Call<List<Igreja>> call, Response<List<Igreja>> response) {
                 if (response.isSuccessful()) {
                     listaIgrejas = response.body();
                     igrejaAdapter = new IgrejaAdapter(IgrejasActivity.this, R.layout.unica_igreja, listaIgrejas);
@@ -73,7 +73,7 @@ public class IgrejasActivity extends AppCompatActivity {
                 }
             }
             @Override
-            public void onFailure(Call<List<ModeloIgreja>> call, Throwable t) {
+            public void onFailure(Call<List<Igreja>> call, Throwable t) {
                 Log.e("ERROR: ", t.getMessage());
             }
         });

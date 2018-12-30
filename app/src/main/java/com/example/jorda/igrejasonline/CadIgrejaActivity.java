@@ -3,10 +3,24 @@ package com.example.jorda.igrejasonline;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.jorda.igrejasonline.domain.Endereco;
+import com.example.jorda.igrejasonline.domain.Igreja;
+import com.example.jorda.igrejasonline.service.RetrofitService;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CadIgrejaActivity extends AppCompatActivity {
+
+    private RetrofitService retrofitService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +53,29 @@ public class CadIgrejaActivity extends AppCompatActivity {
 
 
     public void cadastrarIgreja(View view) {
+        TextView tempCnpj = findViewById(R.id.cnpj);
+        String tcnpj = tempCnpj.getText().toString();
+        TextView tempTelefone = findViewById(R.id.telefone);
+        String ttelefone = tempTelefone.getText().toString();
+        TextView tempNomeIgreja = findViewById(R.id.nomeIgreja);
+        String tigreja = tempNomeIgreja.getText().toString();
+
+        Igreja igreja = new Igreja(null, tcnpj, ttelefone, tigreja);
+
+        Call call = retrofitService.getServico().cadastrarIgreja(igreja);
+        call.enqueue(new Callback<Igreja>() {
+            @Override
+            public void onResponse(Call<Igreja> call, Response<Igreja> response) {
+                Log.i("teste","Entrou Post!");
+                Intent i = new Intent(CadIgrejaActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+
+            @Override
+            public void onFailure(Call<Igreja> call, Throwable t) {
+                Toast.makeText(CadIgrejaActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public void voltarInicio(View view) {
@@ -47,3 +84,13 @@ public class CadIgrejaActivity extends AppCompatActivity {
         finishAffinity();  //Método para matar a activity e não deixa-lá indexada na pilhagem
     }
 }
+/*
+{
+	"cnpj"     : "06164253000000",
+	"telefone" : "3432565000",
+	"nome"     : "Igreja do Teste Sagrado",
+    "endereco" : {"id" : 4}
+
+    '{"id" : 4}'
+}
+*/

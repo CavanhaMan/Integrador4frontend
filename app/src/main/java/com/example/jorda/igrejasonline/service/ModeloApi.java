@@ -1,15 +1,17 @@
 package com.example.jorda.igrejasonline.service;
 
-import com.example.jorda.igrejasonline.domain.ModeloCalendario;
-import com.example.jorda.igrejasonline.domain.ModeloEvento;
-import com.example.jorda.igrejasonline.domain.ModeloIgreja;
+import com.example.jorda.igrejasonline.domain.Calendario;
+import com.example.jorda.igrejasonline.domain.Evento;
+import com.example.jorda.igrejasonline.domain.Igreja;
 import com.example.jorda.igrejasonline.model.ModeloCidade;
 import com.example.jorda.igrejasonline.model.ModeloEstado;
 
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface ModeloApi {
@@ -22,19 +24,21 @@ public interface ModeloApi {
 
     // End-point busca igreja
     @GET("/igrejas")
-    Call<List<ModeloIgreja>> getIgrejas();
+    Call<List<Igreja>> getIgrejas();
 
     @GET("/igrejas/{id}")
-    Call<ModeloIgreja> consulta(@Path("titulo")  String titulo);
+    Call<Igreja> consulta(@Path("titulo")  String titulo);
 
     // End-point busca igreja
     @GET("/eventos")
-    Call<List<ModeloEvento>> getEventos();
+    Call<List<Evento>> getEventos();
 
     @GET("/eventos/{id}")
-    Call<ModeloEvento> consulta(@Path("id") Integer id);
+    Call<Evento> consulta(@Path("id") Integer id);
 
-    // End-point busca igreja
+/*  // End-point busca igreja
     @GET("/calendarios")
-    Call<List<ModeloCalendario>> getCalendarios();
+    Call<List<Calendario>> getCalendarios(); */
+    @POST("/igrejas")
+    Call<Void> cadastrarIgreja(@Body Igreja igreja); // post sem retorno
 }

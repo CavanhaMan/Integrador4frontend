@@ -9,16 +9,16 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import com.example.jorda.igrejasonline.R;
-import com.example.jorda.igrejasonline.domain.ModeloEvento;
+import com.example.jorda.igrejasonline.domain.Evento;
 
 import java.util.List;
 
-public class EventoAdapter extends ArrayAdapter<ModeloEvento> {
+public class EventoAdapter extends ArrayAdapter<Evento> {
 
     private Context context;
-    private List<ModeloEvento> eventos;
+    private List<Evento> eventos;
 
-    public EventoAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<ModeloEvento> objects) {
+    public EventoAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Evento> objects) {
         super(context, resource, objects);
         this.context = context;
         this.eventos = objects;

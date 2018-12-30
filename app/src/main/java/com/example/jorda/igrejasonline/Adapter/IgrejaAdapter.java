@@ -10,16 +10,16 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.jorda.igrejasonline.R;
-import com.example.jorda.igrejasonline.domain.ModeloIgreja;
+import com.example.jorda.igrejasonline.domain.Igreja;
 
 import java.util.List;
 
-public class IgrejaAdapter extends ArrayAdapter<ModeloIgreja> {
+public class IgrejaAdapter extends ArrayAdapter<Igreja> {
 
     private Context context;
-    private List<ModeloIgreja> igrejas;
+    private List<Igreja> igrejas;
 
-    public IgrejaAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<ModeloIgreja> objects) {
+    public IgrejaAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull List<Igreja> objects) {
         super(context, resource, objects);
         this.context = context;
         this.igrejas = objects;

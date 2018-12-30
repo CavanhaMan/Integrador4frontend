@@ -1,11 +1,11 @@
 package com.example.jorda.igrejasonline.domain;
 
-public class ModeloEvento {
+public class Calendario {
     
     private String titulo;
     private String dataInicio;
-    private String horaInicio;
     private String dataTermino;
+    private String horaInicio;
     private String horaTermino;
     private String descricao;
     private String publico;
@@ -38,18 +38,18 @@ public class ModeloEvento {
         this.dataInicio = dataInicio;
     }
 
-    public String getHoraInicio() {
-        return horaInicio;
-    }
-    public void setHoraInicio(String horaInicio) {
-        this.horaInicio = horaInicio;
-    }
-
     public String getDataTermino() {
         return dataTermino;
     }
     public void setDataTermino(String dataTermino) {
         this.dataTermino = dataTermino;
+    }
+
+    public String getHoraInicio() {
+        return horaInicio;
+    }
+    public void setHoraInicio(String horaInicio) {
+        this.horaInicio = horaInicio;
     }
 
     public String getHoraTermino() {
