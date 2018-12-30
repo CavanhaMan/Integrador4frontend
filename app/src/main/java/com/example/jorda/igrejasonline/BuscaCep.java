@@ -7,8 +7,10 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,8 +38,8 @@ public class BuscaCep extends AppCompatActivity {
         setContentView(R.layout.activity_cad_endereco);
 
 
-        final Button btnBuscarCEP = (Button) findViewById(R.id.btnCep);
-        final EditText editTextCep = (EditText) findViewById(R.id.cep);
+        final Button btnBuscarCEP = (Button) findViewById(R.id.btnBuscarCEP);
+        final EditText editTextCep = (EditText) findViewById(R.id.edtCep);
 
         btnBuscarCEP.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +87,8 @@ public class BuscaCep extends AppCompatActivity {
         Toast.makeText (getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 
+
+
     private class ProcessJSON extends AsyncTask<String, Void, String> {
 
         @Override
@@ -127,12 +131,12 @@ public class BuscaCep extends AppCompatActivity {
 
                     progressDialog.dismiss();
 
-                    final TextView txtCep = (TextView) findViewById(R.id.cep);
+                    final TextView txtCep = (TextView) findViewById(R.id.edtCep);
                     final TextView txtLogradouro = (TextView) findViewById(R.id.logradouro);
                     final TextView txtBairro = (TextView) findViewById(R.id.bairro);
                     final TextView txtComplemento = (TextView) findViewById(R.id.complemento);
                     final TextView txtLocalidade = (TextView) findViewById(R.id.cidade_);
-
+                    final Spinner spEstado = (Spinner) findViewById(R.id.estado);
 
                     txtCep.setText(cep);
                     if(logradouro != " "){
@@ -150,11 +154,74 @@ public class BuscaCep extends AppCompatActivity {
                     }else{
                         txtBairro.setText("SEM BAIRRO");
                     }
-                    txtLocalidade.setText(localidade + " / " + uf);
+                    txtLocalidade.setText(localidade);
+                    spEstado.setSelection(((ArrayAdapter<String>)spEstado.getAdapter()).getPosition(uf));
 
                 }catch(JSONException e){
                     e.printStackTrace();
                 }
+            }
+        }
+    }
+
+    public void execute(String stream) {
+
+
+        // Toast.makeText(getApplicationContext(), "stream -" + stream, Toast.LENGTH_SHORT).show();
+
+        if(stream !=null){
+            try{
+                // Get the full HTTP Data as JSONObject
+
+                JSONObject reader= new JSONObject(stream);
+
+                String cep = reader.getString("cep");
+                String logradouro = reader.getString("logradouro");
+                String complemento = reader.getString("complemento");
+                String bairro = reader.getString("bairro");
+                String localidade = reader.getString("localidade");
+                String uf = reader.getString("uf");
+
+                DB db = new DB(BuscaCep.this);
+                CEP c = new CEP();
+                c.setCep(cep);
+                c.setLogradouro(logradouro);
+                c.setComplemento(complemento);
+                c.setBairro(bairro);
+                c.setLocalidade(localidade);
+                c.setUf(uf);
+                db.salvar(c);
+
+                progressDialog.dismiss();
+
+                final TextView txtCep = (TextView) findViewById(R.id.edtCep);
+                final TextView txtLogradouro = (TextView) findViewById(R.id.logradouro);
+                final TextView txtBairro = (TextView) findViewById(R.id.bairro);
+                final TextView txtComplemento = (TextView) findViewById(R.id.complemento);
+                final TextView txtLocalidade = (TextView) findViewById(R.id.cidade_);
+                final Spinner spEstado = (Spinner) findViewById(R.id.estado);
+
+                txtCep.setText(cep);
+                if(logradouro != " "){
+                    txtLogradouro.setText(logradouro);
+                }else{
+                    txtLogradouro.setText("SEM LOGRADOURO");
+                }
+                if(complemento != " "){
+                    txtComplemento.setText(complemento);
+                }else{
+                    txtComplemento.setText("SEM COMPLEMENTO");
+                }
+                if(bairro != " "){
+                    txtBairro.setText(bairro);
+                }else{
+                    txtBairro.setText("SEM BAIRRO");
+                }
+                txtLocalidade.setText(localidade + " / " + uf);
+                spEstado.setSelection(((ArrayAdapter<String>)spEstado.getAdapter()).getPosition(uf));
+
+            }catch(JSONException e){
+                e.printStackTrace();
             }
         }
     }

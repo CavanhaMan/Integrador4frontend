@@ -65,7 +65,7 @@
     <string name="complemento">Complemento:</string>
     <string name="bairro">Bairro:</string>
     <string name="logradouro">Logradouro:</string>
-    <string name="hint_telefone">Telefone (XX) xxxx-xxxx</string>
+    <string name="hint_telefone">(XX) xxxx-xxxx</string>
     <string name="novoResponsavel">O responsável não está na lista? Digite o seu nome aqui.</string>
     <string name="cidade">Cidade:</string>
     <string name="proximo">Próximo</string>

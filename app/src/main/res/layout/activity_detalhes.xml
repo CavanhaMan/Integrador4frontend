@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:layout_margin="15dp">
+
+
+    <TextView
+        android:id="@+id/titulo_cep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CEP: "
+        android:layout_row="0"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CEP"
+        android:id="@+id/txtDT_cep"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_row="0"
+        android:layout_column="1" />
+
+    <TextView
+        android:id="@+id/titulo_logradouro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logradouro: "
+        android:layout_row="1"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LOGRADOURO"
+        android:id="@+id/txtDT_logradouro"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_row="1"
+        android:layout_column="1" />
+
+    <TextView
+        android:id="@+id/titulo_complemento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complemento: "
+        android:layout_row="2"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="COMPLEMENTO"
+        android:id="@+id/txtDT_complemento"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_row="2"
+        android:layout_column="1" />
+
+    <TextView
+        android:id="@+id/titulo_bairro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bairro: "
+        android:layout_row="3"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="BAIRRO"
+        android:id="@+id/txtDT_bairro"
+         android:textSize="16dp"
+         android:textStyle="bold"
+         android:layout_row="3"
+         android:layout_column="1" />
+
+    <TextView
+        android:id="@+id/titulo_localidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Localidade: "
+        android:layout_row="4"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LOCALIDADE"
+        android:id="@+id/txtDT_localidade"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_row="4"
+        android:layout_column="1" />
+
+    <TextView
+        android:id="@+id/titulo_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado: "
+        android:layout_row="5"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ESTADO"
+        android:id="@+id/txtDT_estado"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_row="5"
+        android:layout_column="1" />
+
+    <TextView
+        android:id="@+id/titulo_ibge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cod. IBGE: "
+        android:layout_row="6"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="IBGE"
+        android:id="@+id/txtDT_ibge"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_row="6"
+        android:layout_column="1" />
+
+</GridLayout>

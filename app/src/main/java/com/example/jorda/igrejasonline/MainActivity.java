@@ -89,18 +89,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int id = menuItem.getItemId();
         switch (id) {
-            case R.id.configConta:
+            /*case R.id.configConta:
                 Toast.makeText(MainActivity.this, "Usuários", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,CadUsuarioActivity.class));
-                break;
+                break;*/
             case R.id.configIgreja:
                 Toast.makeText(MainActivity.this, "Igrejas", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,CadIgrejaActivity.class));
                 break;
-            case R.id.configCalendario:
+            /*case R.id.configCalendario:
                 Toast.makeText(MainActivity.this, "Celendário", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,CadEventoActivity.class));
-                break;
+                break;*/
             case R.id.configEvento:
                 Toast.makeText(MainActivity.this, "Eventos", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,CadEventoActivity.class));

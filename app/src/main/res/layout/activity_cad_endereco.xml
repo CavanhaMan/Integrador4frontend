@@ -27,22 +27,25 @@
         app:layout_constraintTop_toBottomOf="@+id/order_textview" />
 
     <EditText
-        android:id="@+id/cep"
+        android:id="@+id/edtCep"
         style="@style/CampoEntradaTexto"
         android:layout_width="250dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toStartOf="@+id/btnCep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cep_" />
 
     <Button
-        android:id="@+id/btnCep"
+        android:id="@+id/btnBuscarCEP"
         android:layout_width="110dp"
         android:layout_height="40dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
+        android:visibility="invisible"
         android:text="Buscar CEP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/order_textview" />
@@ -54,7 +57,7 @@
         app:layout_constraintEnd_toStartOf="@+id/logradouro"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cep" />
+        app:layout_constraintTop_toBottomOf="@+id/edtCep" />
 
     <EditText
         android:id="@+id/logradouro"

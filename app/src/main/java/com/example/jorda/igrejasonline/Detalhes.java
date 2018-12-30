@@ -3,7 +3,10 @@ package com.example.jorda.igrejasonline;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.example.jorda.igrejasonline.db.DB;
 import com.example.jorda.igrejasonline.model.CEP;
@@ -19,11 +22,12 @@ public class Detalhes extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        EditText txtCep = (EditText) findViewById(R.id.cep);
+        EditText txtCep = (EditText) findViewById(R.id.edtCep);
         EditText txtLogradouro = (EditText) findViewById(R.id.logradouro);
         EditText txtComplemento = (EditText) findViewById(R.id.complemento);
         EditText txtBairro = (EditText) findViewById(R.id.bairro);
         EditText txtLocalidade = (EditText) findViewById(R.id.cidade);
+        Spinner spEstado = (Spinner) findViewById(R.id.estado);
 
         if(intent != null){
             Bundle paramns = intent.getExtras();
@@ -37,7 +41,8 @@ public class Detalhes extends AppCompatActivity {
                 txtLogradouro.setText(cep.getLogradouro());
                 txtComplemento.setText(cep.getComplemento());
                 txtBairro.setText(cep.getBairro());
-                txtLocalidade.setText(cep.getLocalidade() +" / "+ cep.getUf());
+                txtLocalidade.setText(cep.getLocalidade());
+                spEstado.setSelection(((ArrayAdapter<String>)spEstado.getAdapter()).getPosition(cep.getUf()));
             }
         }
 
