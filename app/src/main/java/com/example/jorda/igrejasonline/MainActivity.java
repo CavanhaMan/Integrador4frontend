@@ -90,12 +90,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = menuItem.getItemId();
         switch (id) {
             case R.id.confCadIgreja:
-                Toast.makeText(MainActivity.this, "Igrejas", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Cadastrar Igrejas", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,CadIgrejaActivity.class));
                 break;
+            case R.id.confEdIgreja:
+                Toast.makeText(MainActivity.this, "Editar Igrejas", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,EdIgrejaActivity.class));
+                break;
+            case R.id.confExIgreja:
+                Toast.makeText(MainActivity.this, "Apagar Igrejas", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,ExIgrejaActivity.class));
+                break;
             case R.id.confCadEvento:
-                Toast.makeText(MainActivity.this, "Eventos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Cadastrar Eventos", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this,CadEventoActivity.class));
+                break;
+            case R.id.confEdEvento:
+                Toast.makeText(MainActivity.this, "Editar Eventos", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,EdEventoActivity.class));
+                break;
+            case R.id.confExEvento:
+                Toast.makeText(MainActivity.this, "Apagar Eventos", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,ExEventoActivity.class));
                 break;
             /*case R.id.configConta:
                 Toast.makeText(MainActivity.this, "Usuários", Toast.LENGTH_SHORT).show();

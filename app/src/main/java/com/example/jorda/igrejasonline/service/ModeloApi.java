@@ -10,6 +10,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -37,12 +38,24 @@ public interface ModeloApi {
     @GET("/eventos/{id}")
     Call<Evento> consulta(@Path("id") Integer id);
 
+
     @POST("/igrejas")
     Call<Void> cadastrarIgreja(@Body Igreja igreja); // post sem retorno
 
     @PUT("/igrejas/{id}")
-    Call<Igreja> updateIgreja(@Path("id") Integer id, @Body Igreja igreja);
+    Call<Igreja> editarIgreja(@Path("id") Integer id, @Body Igreja igreja);
+
+    @DELETE("/usuarios/{id}")
+    Call<Igreja> apagarIgreja(@Path("id") int id);
+
 
     @POST("/eventos")
     Call<Void> cadastrarEvento(@Body Evento evento);
+
+    @PUT("/eventos/{id}")
+    Call<Evento> editarEvento(@Path("id") Integer id, @Body Evento evento);
+
+    @DELETE("/usuarios/{id}")
+    Call<Evento> apagarEvento(@Path("id") int id);
+
 }

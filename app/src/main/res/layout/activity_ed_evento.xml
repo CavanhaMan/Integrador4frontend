@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/igreja"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CadEventoActivity">
+
+        <EditText
+            android:id="@+id/descricao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="Descrição"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+        <TextView
+            android:id="@+id/name_label4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/hrIni_evento"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dataInicio" />
+
+        <TextView
+            android:id="@+id/name_label5"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="64dp"
+            android:text="@string/hrFim_evento"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dataTermino" />
+
+        <EditText
+            android:id="@+id/dataTermino"
+            android:layout_width="128dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="44dp"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_label" />
+
+        <TextView
+            android:id="@+id/name_label3"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="44dp"
+            android:text="@string/dtFim_evento"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/dataTermino"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descricao" />
+
+        <TextView
+            android:id="@+id/order_textview"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/evento"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.244"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:text="@string/dtIni_evento"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/dataInicio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descricao" />
+
+        <EditText
+            android:id="@+id/codEvento"
+            android:layout_width="366dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="Código do Evento"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_textview" />
+
+        <EditText
+            android:id="@+id/titulo"
+            android:layout_width="366dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/nm_evento"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/codEvento" />
+
+        <EditText
+            android:id="@+id/publico"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/public_evento"
+            android:inputType="textPersonName"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horaTermino" />
+
+        <EditText
+            android:id="@+id/dataInicio"
+            android:layout_width="126dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_constraintEnd_toStartOf="@+id/dataTermino"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_label"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/horaInicio"
+            android:layout_width="128dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="44dp"
+            android:ems="10"
+            android:inputType="time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_label4" />
+
+        <EditText
+            android:id="@+id/horaTermino"
+            android:layout_width="128dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="44dp"
+            android:ems="10"
+            android:inputType="time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/horaInicio"
+            app:layout_constraintTop_toBottomOf="@+id/name_label5" />
+
+        <Button
+            android:id="@+id/EditarEvento"
+            style="@style/botaoavancar"
+            android:onClick="editarEvento"
+            android:text="Salvar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/publico" />
+
+        <Button
+            android:id="@+id/voltar"
+            style="@style/botaovoltar"
+            android:onClick="voltarInicio"
+            android:text="@string/voltar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/publico" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
